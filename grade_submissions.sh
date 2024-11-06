@@ -16,7 +16,7 @@ do
     gcc $file 2>> $grade_file
     echo "--------------------" >> $grade_file
     if [ -e "./a.out" ]; then
-        ./${exec_file} < $input_file >> $output_file
+        ./${exec_file} < $input_txt >> $output_file
         diff -dwb $output_file $answer_txt >> $grade_file
         mv ${file} ./${compl_dir}
         rm $exec_file
